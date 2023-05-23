@@ -19,20 +19,18 @@
     <%if session.fetch(:student_id) != nil%>
       <%# =@current_student.id% doesnt work>
       <%#if @current_student.id == session.fetch(:student_id)%>
-    <li><a href="/edit_student_profile">Edit My Profile</a></li>
-    <li><a href="/student_sign_out">Sign Me Out, Chief!</a><li>
+    <div><a href="/edit_student_profile">Edit My Profile</a></div>
+    <div><a href="/student_sign_out">Sign Me Out, Chief!</a></div>
+
     <%else%>
       Please, be our guest, and <a href="/student_sign_in">Sign In</a> or <a href="/student_sign_up">Sign Up Here!</a>
-   `<%end%>`
+   <%end%>
     <hr>
   <ul>
     <li><a href="/properties">Living</a></li>
     <li><a href="/schools">Schools Represented</a></li>
     <li><a href="/cities">Cities with Openings</a></li>
-   <%#need to add if else for when signed in%>
-
   </ul>
-
 <hr>
 <%=notice %>
 <%=alert%>
