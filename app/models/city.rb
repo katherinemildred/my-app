@@ -9,4 +9,8 @@
 #  updated_at       :datetime         not null
 #
 class City < ApplicationRecord
+
+  has_many(:properties, { :class_name => "Property", :foreign_key => "city_id", :dependent => :nullify })
+  has_many(:schools, { :class_name => "School", :foreign_key => "city_id", :dependent => :nullify })
+
 end

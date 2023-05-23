@@ -13,7 +13,14 @@
 #  school_id       :integer
 #
 class Student < ApplicationRecord
+
   validates :email, :uniqueness => { :case_sensitive => false }
   validates :email, :presence => true
   has_secure_password
+
+  has_many(:properties, { :class_name => "Property", :foreign_key => "subletter_student_id", :dependent => :destroy })
+  
+  belongs_to(:school, { :required => true, :class_name => "School", :foreign_key => "school_id" })
+
+
 end
