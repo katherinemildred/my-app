@@ -1,0 +1,177 @@
+<div>
+  <div>
+    <h1>
+      Property #<%= @the_property.id %> details
+    </h1>
+
+    <div>
+      <div>
+        <a href="/properties">
+          Go back
+        </a>
+      </div>
+
+      <div>
+        <a href="/delete_property/<%= @the_property.id %>">
+          Delete property
+        </a>
+      </div>
+    </div>
+
+    <dl>
+      <dt>
+        Formal address
+      </dt>
+      <dd>
+        <%= @the_property.formal_address %>
+      </dd>
+
+      <dt>
+        Address description
+      </dt>
+      <dd>
+        <%= @the_property.address_description %>
+      </dd>
+
+      <dt>
+        Monthly rent
+      </dt>
+      <dd>
+        <%= @the_property.monthly_rent %>
+      </dd>
+
+      <dt>
+        Date begins
+      </dt>
+      <dd>
+        <%= @the_property.date_begins %>
+      </dd>
+
+      <dt>
+        Date end
+      </dt>
+      <dd>
+        <%= @the_property.date_end %>
+      </dd>
+
+      <dt>
+        Subletter student
+      </dt>
+      <dd>
+        <%= @the_property.subletter_student_id %>
+      </dd>
+
+      <dt>
+        City
+      </dt>
+      <dd>
+        <%= @the_property.city_id %>
+      </dd>
+
+      <dt>
+        Availability status
+      </dt>
+      <dd>
+        <%= @the_property.availability_status %>
+      </dd>
+
+
+      <dt>
+        Created at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_property.created_at) %> ago
+      </dd>
+
+      <dt>
+        Updated at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_property.updated_at) %> ago
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<hr>
+
+
+<div>
+  <div>
+    <h2>
+      Edit property
+    </h2>
+
+    <form action="/modify_property/<%= @the_property.id %>"  method="post" >
+      <div>
+        <label for="formal_address_box">
+          Formal address
+        </label>
+
+        <input type="text" id="formal_address_box" name="query_formal_address" value="<%= @the_property.formal_address %>">
+      </div>
+
+      <div>
+        <label for="address_description_box">
+          Address description
+        </label>
+
+        <input type="text" id="address_description_box" name="query_address_description" value="<%= @the_property.address_description %>">
+      </div>
+
+      <div>
+        <label for="monthly_rent_box">
+          Monthly rent
+        </label>
+
+        <input type="text" id="monthly_rent_box" name="query_monthly_rent" value="<%= @the_property.monthly_rent %>">
+      </div>
+
+      <div>
+        <label for="date_begins_box">
+          Date begins
+        </label>
+
+        <input type="date" id="date_begins_box" name="query_date_begins" value="<%= @the_property.date_begins %>">
+      </div>
+
+      <div>
+        <label for="subletter_student_id_box">
+          Subletter student
+        </label>
+
+        <input type="text" id="subletter_student_id_box" name="query_subletter_student_id" value="<%= @the_property.subletter_student_id %>">
+      </div>
+
+      <div>
+        <label for="city_id_box">
+          City
+        </label>
+
+        <input type="text" id="city_id_box" name="query_city_id" value="<%= @the_property.city_id %>">
+      </div>
+
+      <div>
+        <label for="availability_status_box">
+          Availability status
+        </label>
+
+        <input type="text" id="availability_status_box" name="query_availability_status" value="<%= @the_property.availability_status %>">
+      </div>
+
+      <div>
+        <label for="date_end_box">
+          Date end
+        </label>
+
+        <input type="date" id="date_end_box" name="query_date_end" value="<%= @the_property.date_end %>">
+      </div>
+
+      <button>
+        Update property
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>

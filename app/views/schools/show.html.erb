@@ -1,0 +1,86 @@
+<div>
+  <div>
+    <h1>
+      School #<%= @the_school.id %> details
+    </h1>
+
+    <div>
+      <div>
+        <a href="/schools">
+          Go back
+        </a>
+      </div>
+
+      <div>
+        <a href="/delete_school/<%= @the_school.id %>">
+          Delete school
+        </a>
+      </div>
+    </div>
+
+    <dl>
+      <dt>
+        School name
+      </dt>
+      <dd>
+        <%= @the_school.school_name %>
+      </dd>
+
+      <dt>
+        City
+      </dt>
+      <dd>
+        <%= @the_school.city_id %>
+      </dd>
+
+      <dt>
+        Created at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_school.created_at) %> ago
+      </dd>
+
+      <dt>
+        Updated at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_school.updated_at) %> ago
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<hr>
+
+
+<div>
+  <div>
+    <h2>
+      Edit school
+    </h2>
+
+    <form action="/modify_school/<%= @the_school.id %>"  method="post" >
+      <div>
+        <label for="school_name_box">
+          School name
+        </label>
+
+        <input type="text" id="school_name_box" name="query_school_name" value="<%= @the_school.school_name %>">
+      </div>
+
+      <div>
+        <label for="city_id_box">
+          City
+        </label>
+
+        <input type="text" id="city_id_box" name="query_city_id" value="<%= @the_school.city_id %>">
+      </div>
+
+      <button>
+        Update school
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>
