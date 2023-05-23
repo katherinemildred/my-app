@@ -16,10 +16,14 @@
   </head>
 
   <body>
-      
+    <%if session.fetch(:student_id) != nil%>
+      <%# =@current_student.id% doesnt work>
+      <%#if @current_student.id == session.fetch(:student_id)%>
+    <li><a href="/edit_student_profile">Edit My Profile</a></li>
+    <li><a href="/student_sign_out">Sign Me Out, Chief!</a><li>
+    <%else%>
       Please, be our guest, and <a href="/student_sign_in">Sign In</a> or <a href="/student_sign_up">Sign Up Here!</a>
-          <li><a href="/edit_student_profile">Edit My Profile</a></li>
-    <li><a href="/student_sign_out">Sign Me Out, Chief!</a></li>
+   `<%end%>`
     <hr>
   <ul>
     <li><a href="/properties">Living</a></li>
