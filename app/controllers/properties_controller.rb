@@ -23,7 +23,8 @@ class PropertiesController < ApplicationController
     the_property.address_description = params.fetch("query_address_description")
     the_property.monthly_rent = params.fetch("query_monthly_rent")
     the_property.date_begins = params.fetch("query_date_begins")
-    the_property.subletter_student_id = params.fetch("query_subletter_student_id")
+   # the_property.subletter_student_id = params.fetch("query_subletter_student_id")
+    the_property.subletter_student_id = @current_student.id
     the_property.city_id = params.fetch("query_city_id")
     the_property.availability_status = params.fetch("query_availability_status")
     the_property.date_end = params.fetch("query_date_end")

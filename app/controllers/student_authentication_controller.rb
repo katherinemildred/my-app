@@ -46,6 +46,9 @@ class StudentAuthenticationController < ApplicationController
     @student.school_id = params.fetch("query_school_id")
     @student.phone_number = params.fetch("query_phone_number")
 
+    #just added:
+    @student.full_name = @student.first_name + @student.last_name
+
     save_status = @student.save
 
     if save_status == true

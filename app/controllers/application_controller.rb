@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
     the_id = session[:student_id]
     
     @current_student = Student.where({ :id => the_id }).first
+
   end
   
   def force_student_sign_in
