@@ -16,6 +16,7 @@
   </head>
 
   <body>
+    
 
     <%if session.fetch(:student_id) != nil%>
       <%# =@current_student.id% doesnt work>
@@ -31,6 +32,7 @@
     <li><a href="/properties">Living</a></li>
     <li><a href="/schools">Schools Represented</a></li>
     <li><a href="/cities">Cities with Openings</a></li>
+    <li><a href="/contact_students">Contact Other Students</a></li>
   </ul>
 <hr>
 <%=notice %>

@@ -86,4 +86,8 @@ Rails.application.routes.draw do
 
   #------------------------------
 
+
+  get("/contact_students", {:controller=> "students", :action =>"index"})
+
+
 end

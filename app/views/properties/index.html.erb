@@ -8,6 +8,8 @@
 
 <hr>
 
+<%#relevent_student = Student.where({:id => @the_property.subletter_student_id})%>
+
 <div>
   <div>
     <h2>
@@ -166,7 +168,9 @@
         </td>
 
         <td>
-          <%= a_property.subletter_student_id %>
+          <%#= a_property.subletter_student_id %>
+          <%#= Student.where({:id => a_property.subletter_student_id}).first %>
+          <%= a_property.subletter_student_id%>
         </td>
 
         <td>
