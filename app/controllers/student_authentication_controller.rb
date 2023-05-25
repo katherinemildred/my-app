@@ -1,6 +1,7 @@
 class StudentAuthenticationController < ApplicationController
   # Uncomment line 3 in this file and line 5 in ApplicationController if you want to force students to sign in before any other actions.
-  # skip_before_action(:force_student_sign_in, { :only => [:sign_up_form, :create, :sign_in_form, :create_cookie] })
+  
+  skip_before_action(:force_student_sign_in, { :only => [:sign_up_form, :create, :sign_in_form, :create_cookie] }) #uncommented
 
   def sign_in_form
     render({ :template => "student_authentication/sign_in.html.erb" })
