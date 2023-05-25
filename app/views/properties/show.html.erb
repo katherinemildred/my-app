@@ -136,12 +136,22 @@
       </div>
 
       <div>
+        <label for="date_end_box">
+          Date end
+        </label>
+
+        <input type="date" id="date_end_box" name="query_date_end" value="<%= @the_property.date_end %>">
+      </div>
+
+     <%# <div>
         <label for="subletter_student_id_box">
           Subletter student
         </label>
 
-        <input type="text" id="subletter_student_id_box" name="query_subletter_student_id" value="<%= @the_property.subletter_student_id %>">
-      </div>
+        <input type="text" id="subletter_student_id_box" name="query_subletter_student_id" value="<%= @the_property.subletter_student_id %>
+        
+        <%#">
+      </div>%>
 
       <div>
         <label for="city_id_box">
@@ -159,13 +169,7 @@
         <input type="text" id="availability_status_box" name="query_availability_status" value="<%= @the_property.availability_status %>">
       </div>
 
-      <div>
-        <label for="date_end_box">
-          Date end
-        </label>
 
-        <input type="date" id="date_end_box" name="query_date_end" value="<%= @the_property.date_end %>">
-      </div>
 
       <button>
         Update property

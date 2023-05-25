@@ -16,5 +16,5 @@
 #
 class Property < ApplicationRecord
   belongs_to(:subletter_student, { :required => true, :class_name => "Student", :foreign_key => "subletter_student_id" })
-  belongs_to(:city, { :required => true, :class_name => "City", :foreign_key => "city_id", :counter_cache => true })
+  belongs_to(:city, { :required => true, :class_name => "City", :foreign_key => "city_id", :counter_cache => true, :required => true})
 end
