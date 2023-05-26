@@ -11,12 +11,6 @@
         </a>
       </div>
 
-      <div>
-        <a href="/delete_property/<%= @the_property.id %>">
-          Delete property
-        </a>
-      </div>
-    </div>
 
     <dl>
       <dt>
@@ -95,7 +89,7 @@
 
 <hr>
 
-<%if @current_student.id = @the_property.subletter_student_id%>
+<%if @current_student.id == @the_property.subletter_student_id%>
 
 <div>
   <div>
@@ -200,7 +194,15 @@
       </button>
     </form>
   </div>
+
+
+    ` <div>
+        <a href="/delete_property/<%= @the_property.id %>">
+          Delete property
+        </a>
+      </div>
+    </div>
 </div>
 <%else%>
 <%end%>
-<hr>
+

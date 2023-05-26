@@ -21,7 +21,10 @@
   </head>
 
   <body>
-    
+    <%if @current_student == nil %>
+    <%else%>
+    <h1><%=@current_student.first_name%>'s Sublease Search</h1>
+    <%end%>
 
     <%if session.fetch(:student_id) != nil%>
       <%# =@current_student.id% doesnt work>
