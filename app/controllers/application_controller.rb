@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
   
   def force_student_sign_in
     if @current_student == nil
-      redirect_to("/student_sign_in", { :notice => "Silly Goose! You have to sign in first. :)" })
+      redirect_to("/student_sign_in", { :notice => "Silly goose! You have to sign in first. :)" })
     end
   end
 

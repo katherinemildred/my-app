@@ -144,7 +144,11 @@
         </th>
 
         <th>
-          Subletter student
+          Subletter's name
+        </th>
+
+        <th>
+          Subletter's email
         </th>
 
         <th>
@@ -157,10 +161,6 @@
 
         <th>
           Date end
-        </th>
-
-        <th>
-          Created at
         </th>
 
         <th>
@@ -194,13 +194,15 @@
         </td>
 
         <td>
-          <%#= a_property.subletter_student_id %>
-          <%#= Student.where({:id => a_property.subletter_student_id}).first %>
-          <%= a_property.subletter_student%>
+          <%= a_property.subletter_student.first_name + " " + a_property.subletter_student.last_name%>
         </td>
 
         <td>
-          <%= a_property.city%>
+          <%= a_property.subletter_student.email%>
+        </td>
+
+        <td>
+          <%= a_property.city.city_name%>
         </td>
 
         <td>
@@ -211,9 +213,6 @@
           <%= a_property.date_end %>
         </td>
 
-        <td>
-          <%= time_ago_in_words(a_property.created_at) %> ago
-        </td>
         <td>
           <%= time_ago_in_words(a_property.updated_at) %> ago
         </td>
