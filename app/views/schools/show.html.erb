@@ -72,8 +72,17 @@
         <label for="city_id_box">
           City
         </label>
+        <%# 
+        <input type="text" id="city_id_box" name="query_city_id" value="<%= @the_school.city_id %> 
 
-        <input type="text" id="city_id_box" name="query_city_id" value="<%= @the_school.city_id %>">
+        <select name="query_city_id">
+        <% City.all.order(:city_name).each do |a_city|%>
+          <option value="<%= a_city.id%>"> 
+            <%= a_city.city_name%> 
+         </option>
+        <%end%>
+    </select>
+    </div>
       </div>
 
       <button>

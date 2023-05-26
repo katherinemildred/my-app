@@ -1,45 +1,11 @@
 <div>
   <div>
     <h1>
-      List of all schools
+      Schools Our Members Go To
     </h1>
   </div>
 </div>
 
-<hr>
-
-<div>
-  <div>
-    <h2>
-      Add a new school
-    </h2>
-
-    <form action="/insert_school" method="post">
-      <div>
-        <label for="school_name_box">
-          School name
-        </label>
-
-        <input type="text" id="school_name_box" name="query_school_name">
-      </div>
-
-      <div>
-        <label for="city_id_box">
-          City
-        </label>
-
-        <input type="text" id="city_id_box" name="query_city_id">
-      </div>
-
-      <button>
-        Create school
-      </button>
-    </form>
-  </div>
-</div>
-
-<hr>
-<div>
   <div>
     <table border="1">
       <tr>
@@ -96,6 +62,53 @@
       </tr>
       <% end %>
     </table>
+  </div>
+<hr>
+
+<div>
+  <div>
+  <h1>
+    Do you even go here?
+  </h1>
+  </div>
+  <div>
+    <h2>
+      If not, add a new school!
+    </h2>
+    
+    <h3>Make sure your school is in a city we partner with, first!</h3>
+
+    <form action="/insert_school" method="post">
+      <div>
+        <label for="school_name_box">
+          School name
+        </label>
+
+        <input type="text" id="school_name_box" name="query_school_name">
+      </div>
+
+      <div>
+        <label for="city_id_box">
+          City
+        </label>
+
+       <%#  <input type="text" id="city_id_box" name="query_city_id">
+      </div>%>
+
+      <select name="query_city_id">
+        <% City.all.order(:city_name).each do |a_city|%>
+          <option value="<%= a_city.id%>"> 
+            <%= a_city.city_name%> 
+         </option>
+      <%end%>
+    </select>
+    </div>
+
+  <div>
+      <button>
+        Create school
+      </button>
+    </form>
   </div>
 </div>
 
