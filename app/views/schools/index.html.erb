@@ -9,9 +9,9 @@
   <div>
     <table border="1">
       <tr>
-        <th>
+       <%#  <th>
           ID
-        </th>
+        </th>%>
 
         <th>
           School name
@@ -35,16 +35,16 @@
 
       <% @list_of_schools.each do |a_school| %>
       <tr>
-        <td>
+      <%#  <td>
           <%= a_school.id %>
-        </td>
+       <%#  </td>%>
 
         <td>
           <%= a_school.school_name %>
         </td>
 
         <td>
-          <%= a_school.city_id %>
+          <%= a_school.city.city_name %>
         </td>
 
         <td>
