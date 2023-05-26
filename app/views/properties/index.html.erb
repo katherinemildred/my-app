@@ -174,15 +174,14 @@
      
      
       <%#put in drop down%>
-      <%#<div>
+      <div>
         <label for="city_id_box">
           City
         </label>
 
-        <input type="text" id="city_id_box" name="query_city_id">
+       <%# <input type="text" id="city_id_box" name="query_city_id">
       </div> %>
   
-    <div>
       <select name="query_city_id">
         <% City.all.order(:city_name).each do |a_city|%>
           <option value="<%= a_city.id%>"> 
@@ -193,16 +192,15 @@
     </div>
 
 
-    <%#<  <div>
+    <div>
         <label for="availability_status_box">
           Availability status
         </label>
 
-        <input type="text" id="availability_status_box" name="query_availability_status"> 
+      <%#<  <input type="text" id="availability_status_box" name="query_availability_status"> 
   
       </div> %>
      
-     <div>
       <select name="query_availability_status">
        
           <option> 

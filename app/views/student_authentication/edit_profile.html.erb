@@ -19,7 +19,19 @@
       </div>
       <div>
         <label for="school_id_box">School</label>
-        <input id="school_id_box" name="query_school_id" value="<%= @current_student.school_id %>">
+
+
+        <%#<input id="school_id_box" name="query_school_id" value="<%= @current_student.school_id %>
+          <select name="query_school_id">
+    
+    <% School.all.order(:school_name).each do |a_school|%>
+        <option value="<%= a_school.id%>"> 
+          <%= a_school.school_name%> 
+        </option>
+      <%end%>
+    </select>
+
+
       </div>
       <div>
         <label for="phone_number_box">Phone number</label>
@@ -40,5 +52,8 @@
         Update account
       </button>
     </form>
+
+    <%%>
+
   </div>
 </div>
