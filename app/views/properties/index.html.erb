@@ -21,11 +21,7 @@
         </th>
 
         <th>
-          Monthly rent
-        </th>
-
-        <th>
-          Date begins
+          Monthly rent ($USD)
         </th>
 
         <th>
@@ -41,11 +37,15 @@
         </th>
 
         <th>
-          Availability status
+          Date begins
         </th>
 
         <th>
           Date end
+        </th>
+
+        <th>
+          Availability status
         </th>
 
         <th>
@@ -71,9 +71,6 @@
           <%= a_property.monthly_rent %>
         </td>
 
-        <td>
-          <%= a_property.date_begins %>
-        </td>
 
         <td>
           <%= a_property.subletter_student.first_name + " " + a_property.subletter_student.last_name%>
@@ -88,11 +85,15 @@
         </td>
 
         <td>
-          <%= a_property.availability_status %>
+          <%= a_property.date_begins %>
         </td>
 
         <td>
           <%= a_property.date_end %>
+        </td>
+
+        <td>
+          <%= a_property.availability_status %>
         </td>
 
         <td>
@@ -213,7 +214,7 @@
         
       </select>
       </div>
-      <button type="button" class="btn btn-primary">
+      <button>
         Create property
       </button>
     </form>
