@@ -7,13 +7,119 @@
 </div>
 
 <hr>
+<div>
+  <div>
+    <table border="1">
+      <tr>
+
+        <th>
+          Formal address
+        </th>
+
+        <th>
+          Address description
+        </th>
+
+        <th>
+          Monthly rent
+        </th>
+
+        <th>
+          Date begins
+        </th>
+
+        <th>
+          Subletter's name
+        </th>
+
+        <th>
+          Subletter's email
+        </th>
+
+        <th>
+          City
+        </th>
+
+        <th>
+          Availability status
+        </th>
+
+        <th>
+          Date end
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @list_of_properties.each do |a_property| %>
+      <tr>
+
+        <td>
+          <%= a_property.formal_address %>
+        </td>
+
+        <td>
+          <%= a_property.address_description %>
+        </td>
+
+        <td>
+          <%= a_property.monthly_rent %>
+        </td>
+
+        <td>
+          <%= a_property.date_begins %>
+        </td>
+
+        <td>
+          <%= a_property.subletter_student.first_name + " " + a_property.subletter_student.last_name%>
+        </td>
+
+        <td>
+          <%= a_property.subletter_student.email%>
+        </td>
+
+        <td>
+          <%= a_property.city.city_name%>
+        </td>
+
+        <td>
+          <%= a_property.availability_status %>
+        </td>
+
+        <td>
+          <%= a_property.date_end %>
+        </td>
+
+        <td>
+          <%= time_ago_in_words(a_property.updated_at) %> ago
+        </td>
+
+        <td>
+          <a href="/properties/<%= a_property.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+<hr>
+
+<hr>
 
 <%#relevent_student = Student.where({:id => @the_property.subletter_student_id})%>
 
 <div>
   <div>
     <h2>
-      Add a new property
+      Add your property to the list! 
     </h2>
 
     <form action="/insert_property" method="post">
@@ -117,115 +223,3 @@
     </form>
   </div>
 </div>
-
-<hr>
-<div>
-  <div>
-    <table border="1">
-      <tr>
-        <th>
-          ID
-        </th>
-
-        <th>
-          Formal address
-        </th>
-
-        <th>
-          Address description
-        </th>
-
-        <th>
-          Monthly rent
-        </th>
-
-        <th>
-          Date begins
-        </th>
-
-        <th>
-          Subletter's name
-        </th>
-
-        <th>
-          Subletter's email
-        </th>
-
-        <th>
-          City
-        </th>
-
-        <th>
-          Availability status
-        </th>
-
-        <th>
-          Date end
-        </th>
-
-        <th>
-          Updated at
-        </th>
-
-        <th>
-        </th>
-      </tr>
-
-      <% @list_of_properties.each do |a_property| %>
-      <tr>
-        <td>
-          <%= a_property.id %>
-        </td>
-
-        <td>
-          <%= a_property.formal_address %>
-        </td>
-
-        <td>
-          <%= a_property.address_description %>
-        </td>
-
-        <td>
-          <%= a_property.monthly_rent %>
-        </td>
-
-        <td>
-          <%= a_property.date_begins %>
-        </td>
-
-        <td>
-          <%= a_property.subletter_student.first_name + " " + a_property.subletter_student.last_name%>
-        </td>
-
-        <td>
-          <%= a_property.subletter_student.email%>
-        </td>
-
-        <td>
-          <%= a_property.city.city_name%>
-        </td>
-
-        <td>
-          <%= a_property.availability_status %>
-        </td>
-
-        <td>
-          <%= a_property.date_end %>
-        </td>
-
-        <td>
-          <%= time_ago_in_words(a_property.updated_at) %> ago
-        </td>
-
-        <td>
-          <a href="/properties/<%= a_property.id %>">
-            Show details
-          </a>
-        </td>
-      </tr>
-      <% end %>
-    </table>
-  </div>
-</div>
-
-<hr>

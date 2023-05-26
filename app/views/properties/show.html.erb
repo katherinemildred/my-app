@@ -58,14 +58,14 @@
         Subletter student
       </dt>
       <dd>
-        <%= @the_property.subletter_student_id%>
+        <%= @the_property.subletter_student.first_name + " " + @the_property.subletter_student.last_name %>
       </dd>
 
       <dt>
         City
       </dt>
       <dd>
-        <%= @the_property.city_id %>
+        <%= @the_property.city.city_name %>
       </dd>
 
       <dt>

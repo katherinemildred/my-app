@@ -20,7 +20,8 @@ class CitiesController < ApplicationController
   def create
     the_city = City.new
     the_city.city_name = params.fetch("query_city_name")
-    the_city.properties_count = params.fetch("query_properties_count")
+
+   # the_city.properties_count = params.fetch("query_properties_count") #replaced with count function
 
     if the_city.valid?
       the_city.save
