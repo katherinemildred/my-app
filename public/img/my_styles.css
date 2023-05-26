@@ -1,0 +1,17 @@
+.base-button {  background-color:lightcyan;
+  color:black;
+  border-radius: 5px;
+  padding: 5px;
+  width: 10em;
+  height: 5ex;
+  box-shadow: 10px 10px 5px 0px
+}
+
+
+.base-button:hover {
+  background-color: lightblue
+}
+
+.base-button:active{
+  background-color: darkblue
+}
